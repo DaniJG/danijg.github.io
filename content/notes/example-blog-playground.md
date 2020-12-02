@@ -1,7 +1,7 @@
 ---
 title: BlogPlayground
 date: 2018-01-27
-tags: ['project', 'asp-core', 'testing', 'selenium', 'dotnetcurry']
+tags: ['example', 'asp-core', 'testing', 'selenium', 'dotnetcurry']
 ---
 
 An ASP.NET Core website that implements a simple blogger-like website.

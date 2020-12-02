@@ -1,7 +1,7 @@
 ---
 title: Vue templates for ASP.NET Core
 date: 2019-11-04
-tags: ['project', 'javascript', 'vue' ,'asp-core', 'dotnetcurry']
+tags: ['example', 'javascript', 'vue' ,'asp-core', 'dotnetcurry']
 ---
 
 A set of templates showcasing 3 different ways in which a project using Vue-CLI and ASP.NET Core can be structured.

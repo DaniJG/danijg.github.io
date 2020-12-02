@@ -1,7 +1,7 @@
 ---
 title: blazor-ml
 date: 2020-01-23
-tags: ['project', 'asp-core', 'blazor', 'mlnet', 'tensorflow', 'dotnetcurry']
+tags: ['example', 'asp-core', 'blazor', 'mlnet', 'tensorflow', 'dotnetcurry']
 ---
 
 Example application that shows how to integrate a Blazor server-side application with ML.NET

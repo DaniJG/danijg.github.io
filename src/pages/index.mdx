@@ -12,10 +12,6 @@
   limit={5}
 />
 
-<h3>Tutorials</h3>
-
-<FeedItems itemsFormat="compact" filterByTags={['tutorial']} limit={3} />
-
 <h3>Projects&nbsp;&nbsp;
   <Link to='projects'>
     <Button style={{marginTop: '8px'}}>all projects</Button>
@@ -31,6 +27,14 @@
 </h3>
 
 <FeedItems itemsFormat="compact" filterByTags={['open-source']} limit={3} />
+
+<h3>Tutorials and examples&nbsp;&nbsp;
+  <Link to='tutorials-examples'>
+    <Button style={{marginTop: '8px'}}>all tutorials</Button>
+  </Link>
+</h3>
+
+<FeedItems itemsFormat="compact" filterByTags={['tutorial', 'example']} limit={3} />
 
 <h3>Events</h3>
 
