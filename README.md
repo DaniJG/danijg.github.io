@@ -11,7 +11,7 @@ This website was:
 - Published to GitHub pages using GitHub actions.
 
 ### Changes to the theme
-A couple of componnets were overriden to avoid breaking the DotNetCurry magazine articles. The original components would remove the `www.` prefix from these URLs, which results in broken links.
+A couple of componets were overriden to avoid breaking the DotNetCurry magazine articles. The original components would remove the `www.` prefix from these URLs, which results in broken links.
 
 ### Github cards
 Repo cards are generated with [https://gh-card.dev/](https://gh-card.dev/). Note the repo should have a description!

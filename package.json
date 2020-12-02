@@ -2,10 +2,10 @@
   "name": "profile",
   "version": "1.13.0",
   "private": true,
-  "description": "gatsby-starter-chronoblog-profile",
+  "description": "Daniel Jimenez Garcia personal site, using gatsby and gatsby-starter-chronoblog-profile",
   "keywords": [],
   "license": "MIT",
-  "author": "Ivan Ganev <ganevio92@gmail.com>",
+  "author": "Daniel Jimenez Garcia<danieljimgarcia@gmail.com>",
   "scripts": {
     "build": "gatsby build",
     "clean": "gatsby clean",
