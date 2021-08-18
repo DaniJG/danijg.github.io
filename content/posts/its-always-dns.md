@@ -5,7 +5,9 @@ description: Why kubectl stopped being able to interact with private clusters lo
 tags: ['post', 'kubernetes']
 ---
 
-I frequently interact with several Kubernetes clusters which sit behind a corporate VPN. The fact that I had to be connected to the VPN never seemed. I installed months ago `kubectl` in my laptop using Homebrew (see [instructions here](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-with-homebrew-on-macos)) and `kubectl` had been happily connecting to those clusters as long as I was also connected to the VPN.
+I frequently interact with several Kubernetes clusters which sit behind a corporate VPN. The fact that one has to be connected to the VPN in order to access these clusters had never granted a second thought.
+
+Long time ago I installed `kubectl` in my laptop using Homebrew (see [instructions here](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-with-homebrew-on-macos)). Since then, I kept using `kubectl` to connect to those clusters without problems, as long as I was also connected to the VPN.
 
 One day, I started noticing the following error message:
 ```
@@ -37,7 +39,7 @@ And just like that, `kubectl` started working again 🚀
 
 ## The root cause
 
-I wasn't happy though. Since I didnt know why this happened, I was concerned it could happen again. Googling on the basis Docker for mac is doing something funny to my kubectl. Shortly after I found that indeed Docker for mac will repoint your `kubelet` when installed **or upgraded**.
+I wasn't happy though. Since I didnt know why this happened, I was concerned it could happen again. Googling on the basis Docker for mac is doing something funny to my kubectl. Shortly after I found that indeed Docker for mac will repoint your `kubectl` when installed **or upgraded**.
 - Note the issue was closed due to _inactivity_: https://github.com/docker/for-mac/issues/2368
 
 That explained why the binary installed by Homebrew was repointed by Docker. However, why was the Docker version unable to reach out to clusters behind the VPN? What's so different between the 2 versions?
@@ -48,13 +50,13 @@ The way to prevent the issue is by compiling your Go application with the `CGO_E
 
 As you can read in that issue's thread, the Homebrew distribution of `kubectl` does indeed compile it with `CGO_ENABLED=1` while the _official_ google release doesn't.
 
-That solves the mistery. Upgrading docker caused the `kubectl` binary to be repointed to a version of `kubectl` redistributed by Docker. While the Homebrew version is compiled to correctly resolve DNS in MacOS, Docker is redistributing the _official_ google release which isnt compiled this way!
+That solves the mystery. Upgrading docker caused the `kubectl` binary to be repointed to a version of `kubectl` redistributed by Docker. While the Homebrew version is compiled to correctly resolve DNS in MacOS, Docker is redistributing the _official_ google release which isnt compiled this way!
 
 ## TL;DR
 
 If you are a Mac user:
 1. Always install kubectl in Mac using Homebrew
-2. If you notice DNS resolution errors connecting to clusters behind a VPN, its likely Docker for Mac repointed the `kubelet` binary to its own version. Restore to the Homebrew version with:
+2. If you notice DNS resolution errors connecting to clusters behind a VPN, its likely Docker for Mac repointed the `kubectl` binary to its own version. Restore to the Homebrew version with:
     ```
     brew link --overwrite  kubernetes-cli
     ```
