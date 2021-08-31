@@ -30,6 +30,21 @@ module.exports = {
         altText: 'Stack Overflow profile'
       },
       {
+        icon: `linkedin`,
+        url: `https://www.linkedin.com/in/daniel-jg/`,
+        altText: 'LinkedIn profile'
+      },
+      {
+        icon: `npm`,
+        url: `https://www.npmjs.com/~danijg`,
+        altText: 'NPM packages'
+      },
+      {
+        icon: `medium`,
+        url: `https://medium.com/@danieljimgarcia`,
+        altText: 'Articles on Medium'
+      },
+      {
         icon: `leanpub`,
         url: `https://www.dotnetcurry.com/author/daniel-jimenez-garcia`,
         altText: 'Articles on DotNetCurry'
@@ -39,16 +54,6 @@ module.exports = {
         url: `https://kaizendorks.github.io`,
         altText: 'KaizenDorks contributor'
       },
-      {
-        icon: `linkedin`,
-        url: `https://www.linkedin.com/in/daniel-jg/`,
-        altText: 'LinkedIn profile'
-      },
-      {
-        icon: `node-js`,
-        url: `https://www.npmjs.com/~danijg`,
-        altText: 'NPM packages'
-      }
     ],
     uiText: {
       // ui text fot translate
