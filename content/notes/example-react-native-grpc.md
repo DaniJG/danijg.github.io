@@ -1,7 +1,7 @@
 ---
 title: Sample integration between react-native and a gRPC service
 date: 2018-01-25
-tags: ['example', 'javascript', 'grpx' ,'react-native']
+tags: ['example', 'javascript', 'grpc' ,'react-native']
 ---
 
 A sample react-native app that communicates using gRPC with a sample server, also contained in this repo. Both the client app and the server share the protocol buffer definition, which is used to generate both server and client side code.
