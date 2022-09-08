@@ -42,6 +42,7 @@ jobs:
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
         git commit -m 'deploy'
+        git config --global --add safe.directory /github/workspace/public
 
     # force push the contents of the /public folder to the master branch
     - name: Force push to master
