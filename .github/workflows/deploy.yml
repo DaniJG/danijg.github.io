@@ -44,6 +44,7 @@ jobs:
         git commit -m 'deploy'
 
     # force push the contents of the /public folder to the master branch
+    # NOTE: pinned to "master" as a result of https://github.com/ad-m/github-push-action/issues/113
     - name: Force push to master
       uses: ad-m/github-push-action@master
       with:
